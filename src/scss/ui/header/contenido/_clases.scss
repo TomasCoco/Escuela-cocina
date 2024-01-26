@@ -1,0 +1,73 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.clases{
+    background-color: v.$gris;
+    padding: 5rem 0;
+
+    &__heading{
+        margin-bottom: 4rem;
+    }
+
+    &__grid{
+        @include m.tablet{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @include m.desktop{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+        }
+    }
+
+}
+
+
+.clase{
+    border: 1px solid darken(v.$gris, 10%);
+    padding: 2rem;
+    background-color: v.$blanco;
+
+    &__meta{
+        background-color: v.$primario;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        color: v.$blanco;
+    }
+
+    &__precio{
+        background-color: v.$secundario;
+        border-radius: 16px;
+        padding: .5rem;
+        font-weight: 700;
+        color: v.$negro;
+    }
+
+    &__contenido{
+        padding:2rem;
+    }
+
+    &__descripcion{
+        color: v.$primario;
+    }
+
+    &__nombre{
+        min-height: 5rem;
+    }
+
+    &__enlace{
+        background-color: v.$primario;
+        color: v.$blanco;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 1rem;
+        text-align: center;
+    }
+}

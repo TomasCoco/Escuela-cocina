@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.nosotros{
+    padding: 5rem 0; //5rem arriba y abajo - 0 a la izq y der
+
+    &__heading{
+        text-align: center; 
+    }
+
+    @include m.tablet{
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__bloque{
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__imagen{
+        margin: 0 auto;
+    }
+}

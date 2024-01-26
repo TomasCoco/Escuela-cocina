@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    padding: 4rem 1.8rem;
+    border-bottom: 10px solid v.$primario;
+        @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright{
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
